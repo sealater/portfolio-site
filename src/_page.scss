@@ -1,0 +1,13 @@
+// _page.scss
+@use 'global';
+
+$background-image-url: url('./assets/backgrounds/abstract-sharp-like-knife-5k-cn.jpg');
+
+body {
+    font-family: global.$font-stack;
+    color: global.$foreground-color;
+    background-image: $background-image-url;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

@@ -1,0 +1,10 @@
+// _global.scss
+$font-system-ui: -apple-system, BlinkMacSystemFont;
+$font-known-system-ui: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans';
+$font-fallback: 'Helvetica Neue', sans-serif;
+
+$font-stack: $font-system-ui, $font-known-system-ui, $font-fallback;
+
+$primary-color:    #00E99F;
+$foreground-color: #FAFAFA;
+$background-color: #1C1E1F;

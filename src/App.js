@@ -1,17 +1,16 @@
 // App.js
 // import logo from './logo.svg';
 import './App.scss';
+import Sidebar from './components/Sidebar.js'
 
 function App() {
   return (
-    <div className="App">
-      <nav className="App-sidebar">
-        {/* ? Component / */}
-      </nav>
-      <header className="App-header">
+    <div className="app">
+      <Sidebar />
+      <header className="app__header">
         {/*<img src={logo} className="App-logo" alt="logo" />*/}
       </header>
-      <footer className="App-footer">
+      <footer className="app__footer">
         {/* ? Component / */}
       </footer>
     </div>
