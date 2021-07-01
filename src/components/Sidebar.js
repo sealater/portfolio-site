@@ -30,7 +30,7 @@ class Sidebar extends React.Component {
 class SidebarHeader extends React.Component {
     render() {
         return (
-            <a className="sidebar__header">
+            <a href="" className="sidebar__header">
                 <img className="sidebar__avatar" src={Avatar} />
                 <h1 className="sidebar__name">Ethan Davis</h1>
                 <h2 className="sidebar__title">Junior Full-Stack Software Engineer</h2>
@@ -44,9 +44,9 @@ class SidebarNavigation extends React.Component {
         return (
             <ul className="sidebar__navigation">
                 {/* TODO: Add href urls for respective buttons */}
-                <li><SidebarNavigationButton Text="Portfolio" /></li>
-                <li><SidebarNavigationButton Text="Resume" /></li>
-                <li><SidebarNavigationButton Text="Contact Me" /></li>
+                <li><a href="" className="sidebar__button">Portfolio</a></li>
+                <li><a href="" className="sidebar__button">Resume</a></li>
+                <li><a href="" className="sidebar__button">Contact Me</a></li>
             </ul>
         );
     }
@@ -54,37 +54,17 @@ class SidebarNavigation extends React.Component {
 
 class SidebarContact extends React.Component {
     render() {
-        const sidebarContactListStyle = {
-            paddingTop: "12px"
-        };
-
-        const sidebarContactListElementStyle = {
-            display: "inline-block",
-            paddingRight: "8px"
-        };
-
         return (
             <div className="sidebar__contact">
-                <a className="sidebar__button sidebar__button--small">
+                <span className="sidebar__label">
                     Get In Touch
-                </a>
+                </span>
                 <ul className="sidebar__icons">
                     <li><SidebarContactButton IconName="envelope-fill" /></li>
                     <li><SidebarContactButton IconName="github" /></li>
                     <li><SidebarContactButton IconName="telephone-fill" /></li>
                 </ul>
             </div>
-        );
-    }
-}
-
-class SidebarNavigationButton extends React.Component {
-    render() {
-        return (
-            <a className="sidebar__button">
-                <span>{this.props.Text}</span>
-                {/*<i className="SidebarNavigation__button--indicator"></i>*/} {/* TODO: Page indicator logic */}
-            </a>
         );
     }
 }
