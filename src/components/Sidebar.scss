@@ -7,7 +7,7 @@
     left: 0px;
     position: fixed;
     width: 25%;
-    background-color: rgba(0, 233, 159, 0.4); /* Hex: #00E99F */
+    background-color: transparentize(global.$primary-color, 0.6);
     text-transform: uppercase;
 
     // Wrapper
@@ -23,6 +23,8 @@
     }
 
     &__avatar {
+        width: 160px; // TODO: Find larger profile image and do not resize
+        height: 160px; // ^
         display: block;
         margin: 0 auto;
         border-radius: 50%;
@@ -42,7 +44,7 @@
 
     // Navigation
     &__navigation {
-        margin: 4em 0 6em 0;
+        margin: 4em 0 4em 0;
         padding: 0;
         text-align: left;
         list-style-type: none;

@@ -1,16 +1,11 @@
 // Sidebar.js
-import './Sidebar.scss';
 import React from 'react';
+import './Sidebar.scss';
 import Avatar from '../assets/avatar.png';
+import { importAll } from '../utils';
 
 //// Import Images
 const Images = importAll(require.context('../assets/icons/bootstrap', false, /\.(png|jpe?g|svg)$/));
-
-function importAll(r) {
-    let images = {};
-    r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-}
 
 //// Sidebar
 class Sidebar extends React.Component {

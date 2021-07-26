@@ -1,0 +1,114 @@
+// Portfolio.scss
+@use '../global';
+
+.portfolio {
+    &__timeline {
+        position: relative;
+        margin-left: 3em; // TODO: Fix with em
+
+        // Timeline footer indicator
+        & > .entry__period > .entry__indicator {
+            top: calc(-3em - 7px);
+            right: -32px;
+            background-color: #404040; // Fix
+        }
+    }
+
+    &__border {
+        display: block;
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: calc(100% - 10px);
+        border-left: 1px solid rgba(146, 146, 146, 0.25);
+        border-bottom: 1px solid rgba(146, 146, 146, 0.25);
+    }
+}
+
+.entry {
+    position: relative;
+    margin-left: 32px;
+    margin-right: 32px;
+
+    // Header
+    &__header {
+
+    }
+
+    &__title {
+        margin: 0;
+        padding-bottom: 0.2em;
+        line-height: 1.4rem;
+        font-size: 1.4rem;
+        color: global.$primary-color;
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    // Body
+    &__body {
+        max-width: 48%;
+
+        & > p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    // Image
+    &__image {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        max-width: 48%;
+        max-width: calc(50% - 32px);
+        max-height: 100%;
+    }
+
+    // Timeline date indicator
+    &__period {
+        position: absolute;
+        width: 100px;
+        margin-left: -128px;
+        margin-top: 4px;
+        text-align: right;
+
+        /*
+        &:last-of-type > .entry__indicator {
+            top: calc(-1.6em - 8px);
+            right: -32px;
+            background-color: #404040; // Fix
+        }
+        */
+    }
+
+    &__range {
+        margin: 0;
+        padding-right: 16px;
+        line-height: 0.8rem;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: #929292;
+        opacity: 0.8;
+    }
+
+    &__indicator {
+        position: absolute;
+        display: block;
+        top: calc(0.5em - 3.5px);
+        right: 0px;
+        width: 7px;
+        height: 7px;
+        background-color: global.$primary-color;
+    }
+
+    // Seperator
+    &__seperator {
+        display: block;
+        width: 100%;
+        margin: 3em auto;
+        border-bottom: 1px solid rgba(146, 146, 146, 0.20); // Fix with proper color in _global
+    }
+}

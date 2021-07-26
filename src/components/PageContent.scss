@@ -1,0 +1,21 @@
+// PageContent.scss
+@use '../global';
+
+.page-content {
+    margin-left: 25%;
+    background-color: transparentize(global.$background-color, 0.15);
+
+    // Wrapper
+    &--inner {
+        max-width: 1300px;
+        padding: 48px 40px;
+    }
+
+    &__title {
+        margin: 0;
+        padding-bottom: 24px;
+        font-size: 1.4rem;
+        color: #00E99F;
+        text-transform: uppercase;
+    }
+}
