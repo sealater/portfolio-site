@@ -4,11 +4,11 @@
 .portfolio {
     &__timeline {
         position: relative;
-        margin-left: 3em; // TODO: Fix with em
+        margin-left: 4em; // TODO: Fix with em
 
         // Timeline footer indicator
         & > .entry__period > .entry__indicator {
-            top: calc(-3em - 7px);
+            top: calc(-2em - 7px);
             right: -32px;
             background-color: #404040; // Fix
         }
@@ -39,21 +39,239 @@
         margin: 0;
         padding-bottom: 0.2em;
         line-height: 1.4rem;
-        font-size: 1.4rem;
         color: global.$primary-color;
     }
 
     &__subtitle {
         margin: 0;
-        font-size: 1rem;
     }
 
     // Body
     &__body {
-        max-width: 48%;
+        & > ul {
+            padding-left: 1.5em;
+            list-style: none; /* Remove default bullets */
+        }
 
-        & > p:last-of-type {
+        & > ul li {
+            padding: 0.2em 0;
+        }
+
+        & > ul li::before {
+            content: "\25AA";
+            color: global.$primary-color;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        & > :last-child {
             margin-bottom: 0;
+        }
+
+        &--img {
+            max-width: 48%;
+        }
+    }
+
+    // Footer
+    &__footer {
+        margin-top: 2em;
+        user-select: none;
+
+        & h3 {
+            text-transform: uppercase;
+            color: global.$primary-color;
+        }
+    }
+
+    /*
+    $sky-blue:         #00D4FF;
+    $ocean-blue:       #0055FF;
+    $purply-blue:      #2A00FF;
+    $purple:           #AA00FF;
+    $pink:             #FF00D4;
+    $vibrant-pink:     #FF0054;
+    $red:              #FF001D;
+    $orange:           #FF2A00;
+    $light-orange:     #FFAA00;
+    $yellow:           #FFFF00;
+    $green:            #16C934;
+    */
+
+    // Footer - Tool
+    &__tool {
+        margin: 0 0.6em 0 0;
+        padding: 0.4em 0.6em;
+        display: inline-block;
+        letter-spacing: 0.025em;
+        color: global.$primary-color;
+        border: 1px solid global.$primary-color;
+
+        // Sky Blue
+        &--sky-blue {
+            color: global.$sky-blue;
+            border-color: global.$sky-blue;
+        }
+
+        // Purple
+        &--purple {
+            color: global.$purple;
+            border-color: global.$purple;
+        }
+
+        // Pink
+        &--pink {
+            color: global.$pink;
+            border-color: global.$pink;
+        }
+
+        // Vibrant Pink
+        &--vibrant-pink {
+            color: global.$vibrant-pink;
+            border-color: global.$vibrant-pink;
+        }
+
+        // Red
+        &--red {
+            color: global.$red;
+            border-color: global.$red;
+        }
+
+        // Orange
+        &--orange {
+            color: global.$orange;
+            border-color: global.$orange;
+        }
+
+        // Light Orange
+        &--light-orange {
+            color: global.$light-orange;
+            border-color: global.$light-orange;
+        }
+
+        // Yellow
+        &--yellow {
+            color: global.$yellow;
+            border-color: global.$yellow;
+        }
+
+        // Green
+        &--green {
+            color: global.$green;
+            border-color: global.$green;
+        }
+    }
+
+    // Footer - Link
+    &__link {
+        margin: 0 0 0 0.6em;
+        padding: 0.4em 0.6em;
+        float: right;
+        border: 1px solid global.$grey;
+        letter-spacing: 0.025em;
+        color: global.$grey;
+        transition: all 80ms;
+
+        &::after {
+            content: ' 🞂';
+        }
+
+        &:hover {
+            color: global.$foreground-color;
+            background-color: global.$grey;
+        }
+
+        // Sky Blue
+        &--sky-blue {
+            color: global.$sky-blue;
+            border-color: global.$sky-blue;
+        }
+
+        &--sky-blue:hover {
+            background-color: global.$sky-blue;
+        }
+
+        // Purple
+        &--purple {
+            color: global.$purple;
+            border-color: global.$purple;
+        }
+
+        &--purple:hover {
+            background-color: global.$purple;
+        }
+
+        // Pink
+        &--pink {
+            color: global.$pink;
+            border-color: global.$pink;
+        }
+
+        &--pink:hover {
+            background-color: global.$pink;
+        }
+
+        // Vibrant Pink
+        &--vibrant-pink {
+            color: global.$vibrant-pink;
+            border-color: global.$vibrant-pink;
+        }
+
+        &--vibrant-pink:hover {
+            background-color: global.$vibrant-pink;
+        }
+
+        // Red
+        &--red {
+            color: global.$red;
+            border-color: global.$red;
+        }
+
+        &--red:hover {
+            background-color: global.$red;
+        }
+
+        // Orange
+        &--orange {
+            color: global.$orange;
+            border-color: global.$orange;
+        }
+
+        &--orange:hover {
+            background-color: global.$orange;
+        }
+
+        // Light Orange
+        &--light-orange {
+            color: global.$light-orange;
+            border-color: global.$light-orange;
+        }
+
+        &--light-orange:hover {
+            background-color: global.$light-orange;
+        }
+
+        // Yellow
+        &--yellow {
+            color: global.$yellow;
+            border-color: global.$yellow;
+        }
+
+        &--yellow:hover {
+            color: global.$background-color;
+            background-color: global.$yellow;
+        }
+
+        // Green
+        &--green {
+            color: global.$green;
+            border-color: global.$green;
+        }
+
+        &--green:hover {
+            background-color: global.$green;
         }
     }
 
@@ -108,7 +326,7 @@
     &__seperator {
         display: block;
         width: 100%;
-        margin: 3em auto;
-        border-bottom: 1px solid rgba(146, 146, 146, 0.20); // Fix with proper color in _global
+        margin: 2em auto;
+        border-bottom: 0.01em solid rgba(146, 146, 146, 0.15); // Fix with proper color in _global
     }
 }

@@ -11,20 +11,22 @@ class PortfolioTimeline extends React.Component {
             <div className="portfolio__timeline">
                 <span className="portfolio__border" />
                 <PortfolioTimelineEntry DateRange="Now" Image="react-logo.png">
-                    <PortfolioTimelineEntryHeader Title="React.js Based Portfolio Site" Subtitle="The website you are viewing now. Developed using the React.js framework." />
-                    <p>My first exposure to <span style={{ color: "#00E99F" }}>React.js</span>, this site was developed over the course of four days. <span style={{ color: "#00E99F" }}>React.js</span>, among many things, makes it possible to create styled <span style={{ fontStyle: "italic" }}>Components</span> and reuse them across the site.</p>
-                    <p>Content blocks, such as this portfolio entry, are capable of containing nested components and dynamically adapting their formatting depending on context and properties supplied. </p>
-                    <p>For example, the sidebar to the left is wrapped into a component and dropped into place with a single tag.</p>
-                    <p>A cloud-based <span style={{ color: "#00E99F" }}>Droplet</span> hosted on <span style={{ color: "#00E99F" }}>DigitalOcean</span> has been configured to serve the <span style={{ color: "#00E99F" }}>React.js</span> application.</p>
-                    <p>This site is static and thus warrants little reason for scaling. However, a cloud-based <span style={{ color: "#00E99F" }}>Droplet</span> opens the possibility of quick, low cost, low effort scaling.</p>
+                    <PortfolioTimelineEntryHeader Title="Personal Portfolio Website" />
+                    <p>The purpose of this project was to familiarize myself with React.js and create a space to showcase my work.</p>
+                    <PortfolioTimelineEntryFooter>
+                        <p className="entry__tool entry__tool--sky-blue">React.js</p>
+                        <p className="entry__tool entry__tool--green">Node.js</p>
+                        <p className="entry__tool entry__tool--vibrant-pink">SASS</p>
+                        <a className="entry__link entry__link--sky-blue" href="https://google.com">View on GitHub</a>
+                    </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="" Image="taskmanager560-dashboard.png">
                     <PortfolioTimelineEntryHeader Title="Razor Pages Task Manager" Subtitle="A course project developed with ASP.NET Core Razor Pages in a team of three." />
                     <p>My team and I designed and developed a task-management web application tailored both for individual and group needs. The principal goal of the assigned project was exposure to Microsoft web application development tools. Our completed web application offered:</p>
                     <ul>
-                        <p>A <span style={{ color: "#00E99F" }}>SQL</span> backed user registration and login system for data storage and retrieval.</p>
-                        <p>A personal account dashboard with the ability to add, complete, or remove individual tasks.</p>
-                        <p>A group management system featuring group creation, subscription, and task management.</p>
+                        <li>A <span style={{ color: "#00E99F" }}>SQL</span> backed user registration and login system for data storage and retrieval.</li>
+                        <li>A personal account dashboard with the ability to add, complete, or remove individual tasks.</li>
+                        <li>A group management system featuring group creation, subscription, and task management.</li>
                     </ul>
                     <p>Group owner’s may assign tasks to the individual or broadly assign a task to all members within a group. Once a group is created, members can be added by their unique username via the <span style={{ fontWeight: "bold" }}>+ Add Member</span> button. While I worked on all portions of the project, the database design, procedures, <span style={{ fontWeight: "bold", color: "#00E99F" }}>C#</span> interface, and <span style={{ fontWeight: "bold", color: "#00E99F" }}>SQL</span> code was completed by myself exclusively.</p>
                 </PortfolioTimelineEntry>
@@ -33,10 +35,10 @@ class PortfolioTimeline extends React.Component {
                     <p>Using Windows Presentation Foundation, I developed a point-of-sale system consisting of a desktop application to facilitate mock-transactions and a web application for public display of menu items.</p>
                     <p>Highly stressed programming principles such as:</p>
                     <ul>
-                        <p>Encapsulation</p>
-                        <p>The Single Responsiblity Principle</p>
-                        <p>Composition, inheritance, and delegation</p>
-                        <p>Abstraction</p>
+                        <li>Encapsulation</li>
+                        <li>The Single Responsiblity Principle</li>
+                        <li>Composition, inheritance, and delegation</li>
+                        <li>Abstraction</li>
                     </ul>
                     <p>The primary goal of the semester long project was to become familiar with object-oriented programming principles and display the versatility of systems with Model-View-Controller designs.</p>
                     <p>For example, the website sourced the same data model which led to both consistency and ease of modification/updating.</p>
@@ -52,12 +54,12 @@ class PortfolioTimeline extends React.Component {
                     <p>The script utilizes tricky firewall rules that, when enabled within millisecond margins, do not allow the outbound request to resolve. The default behavior of the unresolved request does not block the shared library thus leaving it unlocked for use by both users. </p>
                     <p>Of course, the script has not been distributed and may be patched at any time. Along the way, I implemented these features:</p>
                     <ul>
-                        <p>A custom command-line interface complete with command aliasing.</p>
-                        <p>Commands to enable and disable the firewall.</p>
-                        <p>A command to kill the currently running client and a command to start the client with automatic login.</p>
-                        <p>A command to increase/decrease the millisecond timing of firewall toggling.</p>
-                        <p>A command to save/load firewall timings from a configuration file.</p>
-                        <p>A terminal header displaying script variables states.</p>
+                        <li>A custom command-line interface complete with command aliasing.</li>
+                        <li>Commands to enable and disable the firewall.</li>
+                        <li>A command to kill the currently running client and a command to start the client with automatic login.</li>
+                        <li>A command to increase/decrease the millisecond timing of firewall toggling.</li>
+                        <li>A command to save/load firewall timings from a configuration file.</li>
+                        <li>A terminal header displaying script variables states.</li>
                     </ul>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="">
@@ -72,13 +74,13 @@ class PortfolioTimeline extends React.Component {
                     <p>The Windows operating system does not lend well to change. Simple frustrations led me to begin writing registry tweaks so I might bring some level of order to chaos.</p>
                     <p>Among these tweaks are standalone <span style={{ color: "#00E99F" }}>.reg</span> files whose names reflect their application.</p>
                     <ul>
-                        <p><span style={{ color: "#00E99F" }}>copy-as-path.reg</span>: adds a context menu item to all files allowing their path to be directly copied.</p>
-                        <p><span style={{ color: "#00E99F" }}>desktop-background.reg</span>: modifies the Desktop background context menu with custom icons and helpful tools.</p>
-                        <p><span style={{ color: "#00E99F" }}>directory-background.reg</span>: modifies all directory's Explorer background context menu with custom icons and helpful tools.</p>
-                        <p><span style={{ color: "#00E99F" }}>modify-explorer.reg</span>: removes bloated listings in Explorer such as OneDrive and QuickLinks.</p>
-                        <p><span style={{ color: "#00E99F" }}>open-with-notepad++.reg</span>: context menu item to open any file in Notepad++</p>
-                        <p><span style={{ color: "#00E99F" }}>replicate-folder-view-settings.red</span>: grants ability to apply current Explorer folder view settings globally.</p>
-                        <p><span style={{ color: "#00E99F" }}>transparent-shortcut-overlay.reg</span>: removes the ugly shortcut icon overlaying all shortcuts.</p>
+                        <li><span style={{ color: "#00E99F" }}>copy-as-path.reg</span>: adds a context menu item to all files allowing their path to be directly copied.</li>
+                        <li><span style={{ color: "#00E99F" }}>desktop-background.reg</span>: modifies the Desktop background context menu with custom icons and helpful tools.</li>
+                        <li><span style={{ color: "#00E99F" }}>directory-background.reg</span>: modifies all directory's Explorer background context menu with custom icons and helpful tools.</li>
+                        <li><span style={{ color: "#00E99F" }}>modify-explorer.reg</span>: removes bloated listings in Explorer such as OneDrive and QuickLinks.</li>
+                        <li><span style={{ color: "#00E99F" }}>open-with-notepad++.reg</span>: context menu item to open any file in Notepad++</li>
+                        <li><span style={{ color: "#00E99F" }}>replicate-folder-view-settings.red</span>: grants ability to apply current Explorer folder view settings globally.</li>
+                        <li><span style={{ color: "#00E99F" }}>transparent-shortcut-overlay.reg</span>: removes the ugly shortcut icon overlaying all shortcuts.</li>
                     </ul>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntryPeriod EndCap /> {/* DUPLICATE: Hacky, reavaluate... in reference to the EndCap switch in 'portfolioTimelineEntryPeriodIndicatorStyle' */}
@@ -93,7 +95,7 @@ function PortfolioTimelineEntry(props) {
             <div className="entry">
                 <PortfolioTimelineEntryPeriod Text={props.DateRange} />
 
-                <div className="entry__body">
+                <div className="entry__body entry__body--img">
                     {props.children}
                 </div>
                 <img src={Images[props.Image].default} className="entry__image" />
@@ -106,7 +108,10 @@ function PortfolioTimelineEntry(props) {
     return (
         <div className="entry">
             <PortfolioTimelineEntryPeriod Text={props.DateRange} />
-            {props.children}
+
+            <div className="entry__body">
+                {props.children}
+            </div>
             <span className="entry__seperator"></span>
         </div>
     );
@@ -128,7 +133,18 @@ class PortfolioTimelineEntryHeader extends React.Component {
         return (
             <div className="entry__header">
                 <h1 class="entry__title">{this.props.Title}</h1>
-                <h2 class="entry__subtitle">{this.props.Subtitle}</h2>
+                <h3 class="entry__subtitle">{this.props.Subtitle}</h3>
+            </div>
+        );
+    }
+}
+
+class PortfolioTimelineEntryFooter extends React.Component {
+    render() {
+        return (
+            <div className="entry__footer">
+                <h3>Tools Used</h3>
+                {this.props.children}
             </div>
         );
     }

@@ -4,6 +4,8 @@
 $background-image-url: url('./assets/backgrounds/abstract-sharp-like-knife-5k-cn.jpg');
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: global.$font-stack;
     color: global.$foreground-color;
     background-image: $background-image-url;
@@ -14,6 +16,18 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+}
+
+h1 {
+    font-size: 1.4em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1em;
 }
 
 a {
