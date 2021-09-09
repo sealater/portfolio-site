@@ -30,6 +30,12 @@
     margin-left: 32px;
     margin-right: 32px;
 
+    &--inner {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+
     // Header
     &__header {
 
@@ -44,17 +50,25 @@
 
     &__subtitle {
         margin: 0;
+		font-style: italic;
     }
 
     // Body
     &__body {
+        flex-basis: 50%;
+		text-align: justify;
+		
+		& > h2 {
+			margin-bottom: 0.4em;
+		}
+		
         & > ul {
             padding-left: 1.5em;
             list-style: none; /* Remove default bullets */
         }
 
         & > ul li {
-            padding: 0.2em 0;
+            padding: 0.4em 0;
         }
 
         & > ul li::before {
@@ -71,7 +85,7 @@
         }
 
         &--img {
-            max-width: 48%;
+            //max-width: 48%;
         }
     }
 
@@ -327,6 +341,33 @@
         display: block;
         width: 100%;
         margin: 2em auto;
-        border-bottom: 0.01em solid rgba(146, 146, 146, 0.15); // Fix with proper color in _global
+        border-bottom: 1px solid rgba(146, 146, 146, 0.15); // Fix with proper color in _global
+    }
+}
+
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    background-color: transparentize(global.$background-color, 1);
+    border-radius: 8px;
+
+    &__image {
+        width: calc(100% - 64px);
+        height: fit-content;
+        //align-self: center;
+        border-radius: 6px;
+
+        &--outer {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            width: 100%;
+        }
+    }
+
+    &__gallery {
+        height: 32px;
+        //background-color: global.$background-color;
     }
 }

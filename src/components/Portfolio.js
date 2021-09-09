@@ -20,6 +20,27 @@ class PortfolioTimeline extends React.Component {
                         <a className="entry__link entry__link--sky-blue" href="https://google.com">View on GitHub</a>
                     </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
+                <PortfolioTimelineEntry DateRange="" Image="taskmanager-560-groups.png">
+                    <PortfolioTimelineEntryHeader Title="Razor Pages Task Manager" Subtitle="A course project developed with ASP.NET Core Razor Pages in a team of three." />
+                    <h2>Header</h2>
+                    <p className="has-header">Vestibulum et nunc dui. Maecenas pulvinar, ante at commodo egestas, neque orci fringilla enim, aliquam pellentesque dolor mauris a dui. Nunc dapibus lacinia urna, eget maximus mi placerat nec. In hac habitasse platea dictumst. Integer posuere venenatis elit nec faucibus. Nam egestas, ex at iaculis elementum, nulla ex convallis justo, a tempus leo libero et libero. Quisque commodo bibendum hendrerit.</p>
+                    <h2>Header 2</h2>
+                    <p className="has-header">Duis pellentesque nunc quis tortor consequat, vel luctus purus luctus. Etiam nulla lacus, condimentum in risus id, euismod luctus dui. Donec malesuada eget magna quis vestibulum. Duis a ultricies massa. Phasellus fermentum tellus eu urna suscipit, a elementum sapien mollis. Sed semper at quam ac dignissim.</p>
+                    <p>Pellentesque vulputate a sem non posuere. Donec urna orci, maximus nec justo quis, vestibulum varius odio. Duis luctus nulla varius convallis consequat. Nunc porttitor sollicitudin lacus, vel posuere quam bibendum quis. Praesent ultricies, urna in porta consequat, massa diam mattis erat, sit amet mattis lacus ligula vehicula augue.</p>
+                    <p>Maecenas faucibus euismod quam suscipit gravida. Suspendisse vestibulum diam sed metus consequat, at porta sem posuere. Fusce sollicitudin mi vel mi porttitor, elementum sodales lectus accumsan. Nam tristique, diam ut porta dictum, orci risus malesuada leo, ut condimentum sapien ex nec dolor.</p>
+                    <ul>
+                        <li>A <span style={{ color: "#00E99F" }}>SQL</span> backed user registration and login system for data storage and retrieval.</li>
+                        <li>A personal account dashboard with the ability to add, complete, or remove individual tasks.</li>
+                        <li>A group management system featuring group creation, subscription, and task management.</li>
+                    </ul>
+                    <p>Group owner’s may assign tasks to the individual or broadly assign a task to all members within a group. Once a group is created, members can be added by their unique username via the <span style={{ fontWeight: "bold" }}>+ Add Member</span> button. While I worked on all portions of the project, the database design, procedures, <span style={{ fontWeight: "bold", color: "#00E99F" }}>C#</span> interface, and <span style={{ fontWeight: "bold", color: "#00E99F" }}>SQL</span> code was completed by myself exclusively.</p>
+                    <PortfolioTimelineEntryFooter>
+                        <p className="entry__tool entry__tool--sky-blue">React.js</p>
+                        <p className="entry__tool entry__tool--green">Node.js</p>
+                        <p className="entry__tool entry__tool--vibrant-pink">SASS</p>
+                        <a className="entry__link entry__link--sky-blue" href="https://google.com">View on GitHub</a>
+                    </PortfolioTimelineEntryFooter>
+                </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="" Image="taskmanager560-dashboard.png">
                     <PortfolioTimelineEntryHeader Title="Razor Pages Task Manager" Subtitle="A course project developed with ASP.NET Core Razor Pages in a team of three." />
                     <p>My team and I designed and developed a task-management web application tailored both for individual and group needs. The principal goal of the assigned project was exposure to Microsoft web application development tools. Our completed web application offered:</p>
@@ -29,6 +50,12 @@ class PortfolioTimeline extends React.Component {
                         <li>A group management system featuring group creation, subscription, and task management.</li>
                     </ul>
                     <p>Group owner’s may assign tasks to the individual or broadly assign a task to all members within a group. Once a group is created, members can be added by their unique username via the <span style={{ fontWeight: "bold" }}>+ Add Member</span> button. While I worked on all portions of the project, the database design, procedures, <span style={{ fontWeight: "bold", color: "#00E99F" }}>C#</span> interface, and <span style={{ fontWeight: "bold", color: "#00E99F" }}>SQL</span> code was completed by myself exclusively.</p>
+                    <PortfolioTimelineEntryFooter>
+                        <p className="entry__tool entry__tool--sky-blue">React.js</p>
+                        <p className="entry__tool entry__tool--green">Node.js</p>
+                        <p className="entry__tool entry__tool--vibrant-pink">SASS</p>
+                        <a className="entry__link entry__link--sky-blue" href="https://google.com">View on GitHub</a>
+                    </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="" Image="cowboy-cafe.png">
                     <PortfolioTimelineEntryHeader Title="Cowboy Cafe POS System" Subtitle="A course project developed using Microsoft WPF framework." />
@@ -95,10 +122,14 @@ function PortfolioTimelineEntry(props) {
             <div className="entry">
                 <PortfolioTimelineEntryPeriod Text={props.DateRange} />
 
-                <div className="entry__body entry__body--img">
-                    {props.children}
+                <div className="entry--inner">
+                    <div className="entry__body entry__body--img">
+                        {props.children}
+                    </div>
+
+                    <PortfolioTimelineSlideshow ImageSrc={Images[props.Image].default} />
+                    {/*<img src={Images[props.Image].default} className="entry__image" />*/}
                 </div>
-                <img src={Images[props.Image].default} className="entry__image" />
 
                 <span className="entry__seperator"></span>
             </div>
@@ -145,6 +176,20 @@ class PortfolioTimelineEntryFooter extends React.Component {
             <div className="entry__footer">
                 <h3>Tools Used</h3>
                 {this.props.children}
+            </div>
+        );
+    }
+}
+
+class PortfolioTimelineSlideshow extends React.Component {
+    render() {
+        return (
+            <div className="slideshow">
+                {/*<div className="slideshow__gallery"></div>*/}
+                <div className="slideshow__image--outer">
+                    <img src={this.props.ImageSrc} className="slideshow__image" />
+                </div>
+                {/*<div className="slideshow__gallery"></div>*/}
             </div>
         );
     }
