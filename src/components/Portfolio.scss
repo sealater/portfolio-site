@@ -289,16 +289,6 @@
         }
     }
 
-    // Image
-    &__image {
-        position: absolute;
-        top: 4px;
-        right: 0;
-        max-width: 48%;
-        max-width: calc(50% - 32px);
-        max-height: 100%;
-    }
-
     // Timeline date indicator
     &__period {
         position: absolute;
@@ -355,7 +345,7 @@
     &__image {
         width: calc(100% - 64px);
         height: fit-content;
-        //align-self: center;
+        align-self: center;
         border-radius: 6px;
 
         &--outer {
@@ -363,6 +353,7 @@
             justify-content: center;
             flex-grow: 1;
             width: 100%;
+            max-height: 100%;
         }
     }
 

@@ -11,64 +11,64 @@ class PortfolioTimeline extends React.Component {
             <div className="portfolio__timeline">
                 <span className="portfolio__border" />
                 <PortfolioTimelineEntry DateRange="Now" Image="react-logo.png">
-                    <PortfolioTimelineEntryHeader Title="Personal Portfolio Website" />
-                    <p>The purpose of this project was to familiarize myself with React.js and create a space to showcase my work.</p>
+                    <PortfolioTimelineEntryHeader Title="Personal Portfolio Website" Subtitle="The purpose of this project is to familiarize myself with React.js and provide a space to showcase my past and future work." />
+                    <h2>Design</h2>
+                    <p className="has-header">This site was designed and prototyped in Draw.io and Adobe XD. Each element has been styled independent of prebuilt frameworks such as Bootstrap. My intention behind designing the site by hand is to further my studies in abstract concepts like UI/UX principles alongside the concrete skills needed to implement them. Seeking conceptual understanding, I studied popular opinions on card design, form structure, breadcrumbs, loaders, modals, pagination, navigation, and many more modern design elements. Further, I studied color design, typography, design values, calls to action, and the importance of simplicity.</p>
+                    <h2>Implementation</h2>
+                    <p className="has-header">In the spirit of exposing myself to new challenges, I chose to implement this site using the React.js framework. The sidebar and content area are split into two seperate components. Each portfolio entry within the content section is a React.js component comprised of a header, body, image, footer, and timeline indicator. Each HTML element has been styled using BEM compliant class names. The styling itself is written in SASS and compiled into CSS. Nested components within a portfolio entry are dynamic and styled according to properties supplied to the React.js components.</p>
+                    <p>SASS partials, such as _global.scss and _page.scss, are imported. The partials provide global variables referenced by individual component stylesheets. This removes duplicate definitions and allows customization of variables, such as the primary color, to be modified easily and only once.</p>
+                    <p>This project has proven invaluable in developing a familiarity with industry popular frameworks and libraries like React.js and SASS.</p>
                     <PortfolioTimelineEntryFooter>
                         <p className="entry__tool entry__tool--sky-blue">React.js</p>
                         <p className="entry__tool entry__tool--green">Node.js</p>
                         <p className="entry__tool entry__tool--vibrant-pink">SASS</p>
-                        <a className="entry__link entry__link--sky-blue" href="https://google.com">View on GitHub</a>
+                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/portfolio-site">View on GitHub</a>
                     </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="" Image="taskmanager-560-groups.png">
-                    <PortfolioTimelineEntryHeader Title="Razor Pages Task Manager" Subtitle="A course project developed with ASP.NET Core Razor Pages in a team of three." />
-                    <h2>Header</h2>
-                    <p className="has-header">Vestibulum et nunc dui. Maecenas pulvinar, ante at commodo egestas, neque orci fringilla enim, aliquam pellentesque dolor mauris a dui. Nunc dapibus lacinia urna, eget maximus mi placerat nec. In hac habitasse platea dictumst. Integer posuere venenatis elit nec faucibus. Nam egestas, ex at iaculis elementum, nulla ex convallis justo, a tempus leo libero et libero. Quisque commodo bibendum hendrerit.</p>
-                    <h2>Header 2</h2>
-                    <p className="has-header">Duis pellentesque nunc quis tortor consequat, vel luctus purus luctus. Etiam nulla lacus, condimentum in risus id, euismod luctus dui. Donec malesuada eget magna quis vestibulum. Duis a ultricies massa. Phasellus fermentum tellus eu urna suscipit, a elementum sapien mollis. Sed semper at quam ac dignissim.</p>
-                    <p>Pellentesque vulputate a sem non posuere. Donec urna orci, maximus nec justo quis, vestibulum varius odio. Duis luctus nulla varius convallis consequat. Nunc porttitor sollicitudin lacus, vel posuere quam bibendum quis. Praesent ultricies, urna in porta consequat, massa diam mattis erat, sit amet mattis lacus ligula vehicula augue.</p>
-                    <p>Maecenas faucibus euismod quam suscipit gravida. Suspendisse vestibulum diam sed metus consequat, at porta sem posuere. Fusce sollicitudin mi vel mi porttitor, elementum sodales lectus accumsan. Nam tristique, diam ut porta dictum, orci risus malesuada leo, ut condimentum sapien ex nec dolor.</p>
+                    <PortfolioTimelineEntryHeader Title="Razor Pages Task Manager" Subtitle="A course project developed with ASP.NET Core Razor Pages." />
+                    <h2>Design</h2>
+                    <p className="has-header">In a team of three, I worked alongside two peers to design a task management web application tailored to the needs of both an individual and a group. The project was split into three domains of responsibility: structure and visual design, functionality and implementation, and database development and connection. I was personally responsible for:</p>
                     <ul>
-                        <li>A <span style={{ color: "#00E99F" }}>SQL</span> backed user registration and login system for data storage and retrieval.</li>
-                        <li>A personal account dashboard with the ability to add, complete, or remove individual tasks.</li>
-                        <li>A group management system featuring group creation, subscription, and task management.</li>
+                        <li>Developing a suitable SQL database design.</li>
+                        <li>Implementing the database and the procedures needed for interacting with it.</li>
+                        <li>Providing an interface in C# to easily communicate and interact the with the database.</li>
                     </ul>
-                    <p>Group owner’s may assign tasks to the individual or broadly assign a task to all members within a group. Once a group is created, members can be added by their unique username via the <span style={{ fontWeight: "bold" }}>+ Add Member</span> button. While I worked on all portions of the project, the database design, procedures, <span style={{ fontWeight: "bold", color: "#00E99F" }}>C#</span> interface, and <span style={{ fontWeight: "bold", color: "#00E99F" }}>SQL</span> code was completed by myself exclusively.</p>
-                    <PortfolioTimelineEntryFooter>
-                        <p className="entry__tool entry__tool--sky-blue">React.js</p>
-                        <p className="entry__tool entry__tool--green">Node.js</p>
-                        <p className="entry__tool entry__tool--vibrant-pink">SASS</p>
-                        <a className="entry__link entry__link--sky-blue" href="https://google.com">View on GitHub</a>
-                    </PortfolioTimelineEntryFooter>
-                </PortfolioTimelineEntry>
-                <PortfolioTimelineEntry DateRange="" Image="taskmanager560-dashboard.png">
-                    <PortfolioTimelineEntryHeader Title="Razor Pages Task Manager" Subtitle="A course project developed with ASP.NET Core Razor Pages in a team of three." />
-                    <p>My team and I designed and developed a task-management web application tailored both for individual and group needs. The principal goal of the assigned project was exposure to Microsoft web application development tools. Our completed web application offered:</p>
+                    <h2>Implementation</h2>
+                    <p className="has-header">The outcome for the project aimed at exposing myself and my peers to web application development within the Microsoft framework. Our completed application offered:</p>
                     <ul>
-                        <li>A <span style={{ color: "#00E99F" }}>SQL</span> backed user registration and login system for data storage and retrieval.</li>
-                        <li>A personal account dashboard with the ability to add, complete, or remove individual tasks.</li>
-                        <li>A group management system featuring group creation, subscription, and task management.</li>
+                        <li>A user based login system with data storage and data retrieval all backed by a remote SQL database.</li>
+                        <li>A user account dashboard with the ability to add, complete, and remove personally created tasks.</li>
+                        <li>A group management system allowing group creation, member subscription, and task management (both for the group as a whole and for each individual group member within it.)</li>
                     </ul>
-                    <p>Group owner’s may assign tasks to the individual or broadly assign a task to all members within a group. Once a group is created, members can be added by their unique username via the <span style={{ fontWeight: "bold" }}>+ Add Member</span> button. While I worked on all portions of the project, the database design, procedures, <span style={{ fontWeight: "bold", color: "#00E99F" }}>C#</span> interface, and <span style={{ fontWeight: "bold", color: "#00E99F" }}>SQL</span> code was completed by myself exclusively.</p>
+                    <p>Group owner's may assign tasks to an individual or broadly assign a task to the group. A member may be added via the Add Member button followed by providing a user's unique username. Collaboration was imperative for the success of this project. While collaborating, our roles often bleed into one anothers. I found this to be very important in finalizing a cohesive web application under the time constraints for the project.</p>
                     <PortfolioTimelineEntryFooter>
-                        <p className="entry__tool entry__tool--sky-blue">React.js</p>
-                        <p className="entry__tool entry__tool--green">Node.js</p>
-                        <p className="entry__tool entry__tool--vibrant-pink">SASS</p>
-                        <a className="entry__link entry__link--sky-blue" href="https://google.com">View on GitHub</a>
+                        <p className="entry__tool entry__tool--light-orange">Razor Pages</p>
+                        <p className="entry__tool entry__tool--purple">Bootstrap</p>
+                        <p className="entry__tool entry__tool--sky-blue">MSSQL</p>
+                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/560-task-manager">View on GitHub</a>
                     </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="" Image="cowboy-cafe.png">
                     <PortfolioTimelineEntryHeader Title="Cowboy Cafe POS System" Subtitle="A course project developed using Microsoft WPF framework." />
-                    <p>Using Windows Presentation Foundation, I developed a point-of-sale system consisting of a desktop application to facilitate mock-transactions and a web application for public display of menu items.</p>
-                    <p>Highly stressed programming principles such as:</p>
+                    <h2>Design</h2>
+                    <p className="has-header">Built using Windows Presentation Foundation, this project provides a point-of-sale desktop application for a mock restaurant dubbed Cowboy Cafe. In addition, a Razor Pages website is included to demonstrate the benefits of a Model-View-Controller approach to software development.</p>
+                    <p>The projects design phase stressed key Object Oriented Programming concepts such as:</p>
                     <ul>
-                        <li>Encapsulation</li>
-                        <li>The Single Responsiblity Principle</li>
-                        <li>Composition, inheritance, and delegation</li>
                         <li>Abstraction</li>
+                        <li>Encapsulation</li>
+                        <li>Inheritance</li>
+                        <li>Polymorphism</li>
                     </ul>
-                    <p>The primary goal of the semester long project was to become familiar with object-oriented programming principles and display the versatility of systems with Model-View-Controller designs.</p>
-                    <p>For example, the website sourced the same data model which led to both consistency and ease of modification/updating.</p>
+                    <h2>Implementation</h2>
+                    <p className="has-header">An interface defines "contractual requirements" for each order item while abstract classes for entrees, sides, and drinks provide inheritable base code alongside variables and methods to be overidden. Views, such as the order summary list, use data binding and listen for property changes to update their contents. As each entree, side, and drink implement the order item interface, lists can very easily define a consistent way to display a collection of order item's contents. Further, because property changes are written into an abstract class, the functionality can then simply be inherited. The benefits of inheritance and abstraction became clear while developing this project.</p>
+                    <p>Lastly, the Razor Pages website pulls from the same "Model" within the Model-View-Controller architecture. This means any change to the models menu items will propagate on both the point-of-sale program and the website.</p>
+                    <PortfolioTimelineEntryFooter>
+                        <p className="entry__tool entry__tool--light-orange">Razor Pages</p>
+                        <p className="entry__tool entry__tool--purple">Bootstrap</p>
+                        <p className="entry__tool entry__tool--sky-blue">WPF</p>
+                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/cowboy-cafe-pos">View on GitHub</a>
+                    </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="">
                     <PortfolioTimelineEntryHeader Title="Starbucks Automated Schedule Retriever" />
