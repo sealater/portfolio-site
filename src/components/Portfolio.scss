@@ -2,6 +2,8 @@
 @use '../global';
 
 .portfolio {
+    min-height: calc(100vh - 150px);
+
     &__timeline {
         position: relative;
         margin-left: 4em; // TODO: Fix with em

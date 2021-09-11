@@ -1,5 +1,9 @@
 // utils.js
 
+// Import Images
+const Images = importAll(require.context('./assets', false, /\.(png|jpe?g|svg)$/));
+const Icons = importAll(require.context('./assets/icons/bootstrap', false, /\.(png|jpe?g|svg)$/));
+
 /**
  * Imports all items matching Regex r
  * @param {string} r
@@ -11,4 +15,4 @@ function importAll(r) {
     return images;
 }
 
-export { importAll }
+export { importAll, Images, Icons }

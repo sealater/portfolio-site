@@ -1,9 +1,7 @@
 // Portfolio.js
 import React from 'react';
 import './Portfolio.scss';
-import { importAll } from '../utils';
-
-const Images = importAll(require.context('../assets', false, /\.(png|jpe?g|svg)$/));
+import { Images } from '../utils';
 
 class PortfolioTimeline extends React.Component {
     render() {

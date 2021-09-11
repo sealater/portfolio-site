@@ -2,10 +2,7 @@
 import React from 'react';
 import './Sidebar.scss';
 import Avatar from '../assets/avatar.png';
-import { importAll } from '../utils';
-
-//// Import Images
-const Images = importAll(require.context('../assets/icons/bootstrap', false, /\.(png|jpe?g|svg)$/));
+import { Icons } from '../utils';
 
 //// Sidebar
 class Sidebar extends React.Component {
@@ -60,7 +57,7 @@ class SidebarContact extends React.Component {
                 <ul className="sidebar__icons">
                     <li><SidebarContactButton IconName="envelope-fill" /></li>
                     <li><SidebarContactButton IconName="github" /></li>
-                    <li><SidebarContactButton IconName="telephone-fill" /></li>
+                    {/*<li><SidebarContactButton IconName="telephone-fill" /></li>*/}
                 </ul>
             </div>
         );
@@ -69,7 +66,7 @@ class SidebarContact extends React.Component {
 
 class SidebarContactButton extends React.Component {
     render() {
-        const iconStyle = { backgroundImage: "url(" + Images[this.props.IconName + ".svg"].default + ")" };
+        const iconStyle = { backgroundImage: "url(" + Icons[this.props.IconName + ".svg"].default + ")" };
 
         return (
             <a className="sidebar__button sidebar__button--contact" style={iconStyle}></a>

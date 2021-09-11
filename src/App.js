@@ -12,6 +12,7 @@ import Sidebar from './components/Sidebar.js'
 import PageContent from './components/PageContent.js'
 import Portfolio from './components/Portfolio.js'
 import Resume from './components/Resume.js'
+import Contact from './components/Contact.js'
 
 function App() {
   return (
@@ -22,19 +23,23 @@ function App() {
           <Link to="/resume" className="sidebar__button">Resume</Link>
           <Link to="/contactme" className="sidebar__button">Contact Me</Link>
         </Sidebar>
-        <PageContent Title="Portfolio">
-          <Switch>
-            <Route exact path="/">
+        <Switch>
+          <Route exact path="/">
+            <PageContent Title="Portfolio">
               <Portfolio />
-            </Route>
-            <Route exact path="/resume">
+            </PageContent>
+          </Route>
+          <Route exact path="/resume">
+            <PageContent Title="Resume">
               <Resume />
-            </Route>
-            <Route exact path="/contactme">
-
-            </Route>
-          </Switch>
-        </PageContent>
+            </PageContent>
+          </Route>
+          <Route exact path="/contactme">
+            <PageContent Title="Contact Me">
+              <Contact />
+            </PageContent>
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
