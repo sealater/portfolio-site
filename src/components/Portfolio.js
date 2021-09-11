@@ -31,7 +31,7 @@ class PortfolioTimeline extends React.Component {
                     <p className="has-header">In a team of three, I worked alongside two peers to design a task management web application tailored to the needs of both an individual and a group. The project was split into three domains of responsibility: structure and visual design, functionality and implementation, and database development and connection. I was personally responsible for:</p>
                     <ul>
                         <li>Developing a suitable SQL database design.</li>
-                        <li>Implementing the database and the procedures needed for interacting with it.</li>
+                        <li>Building the database and the procedures needed for interacting with it.</li>
                         <li>Providing an interface in C# to easily communicate and interact the with the database.</li>
                     </ul>
                     <h2>Implementation</h2>

@@ -14,7 +14,7 @@ class Sidebar extends React.Component {
             <nav className="sidebar">
                 <div className="sidebar--inner">
                     <SidebarHeader />
-                    <SidebarNavigation />
+                    <SidebarNavigation Links={this.props.children} />
                     <SidebarContact />
                 </div>
             </nav>
@@ -34,17 +34,20 @@ class SidebarHeader extends React.Component {
     }
 }
 
-class SidebarNavigation extends React.Component {
-    render() {
-        return (
-            <ul className="sidebar__navigation">
-                {/* TODO: Add href urls for respective buttons */}
-                <li><a href="" className="sidebar__button">Portfolio</a></li>
-                <li><a href="" className="sidebar__button">Resume</a></li>
-                <li><a href="" className="sidebar__button">Contact Me</a></li>
-            </ul>
-        );
-    }
+function SidebarNavigation(props) {
+    return (
+        <ul className="sidebar__navigation">
+            {/* TODO: Add href urls for respective buttons */}
+            {props.Links.map((link, i) => {
+                return <li>{link}</li>
+            })}
+            {/*
+            <li><a href="" className="sidebar__button">Portfolio</a></li>
+            <li><a href="" className="sidebar__button">Resume</a></li>
+            <li><a href="" className="sidebar__button">Contact Me</a></li>
+            */}
+        </ul>
+    );
 }
 
 class SidebarContact extends React.Component {
