@@ -369,3 +369,22 @@
         //background-color: global.$background-color;
     }
 }
+
+@media (max-width: 1096px) {
+    .entry {
+        &--inner {
+            flex-direction: column;
+        }
+
+        &__body {
+            &--img {
+                flex-basis: unset;
+            }
+        }
+    }
+
+    .slideshow {
+        display: none;
+        order: -1;
+    }
+}

@@ -31,7 +31,7 @@ function App() {
           </Route>
           <Route exact path="/resume">
             <PageContent Title="Resume">
-              <Resume />
+              <Resume SmallDevice={window.matchMedia("(max-width: 1060px)").matches} />
             </PageContent>
           </Route>
           <Route exact path="/contactme">
