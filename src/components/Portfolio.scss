@@ -391,6 +391,22 @@
         &__range {
             display: none;
         }
+
+        &__tool, &__link {
+            margin: 0;
+            margin-top: 0.8em;
+            display: block;
+            float: none;
+        }
+
+        &__link {
+            text-align: center;
+            display: block;
+        }
+
+        &__link::after {
+            content: unset;
+        }
     }
 
     .slideshow {
