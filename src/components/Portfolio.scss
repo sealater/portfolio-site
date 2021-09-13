@@ -371,6 +371,12 @@
 }
 
 @media (max-width: 1096px) {
+    .portfolio {
+        &__timeline {
+            margin-left: 0;
+        }
+    }
+
     .entry {
         &--inner {
             flex-direction: column;
@@ -380,6 +386,10 @@
             &--img {
                 flex-basis: unset;
             }
+        }
+
+        &__range {
+            display: none;
         }
     }
 

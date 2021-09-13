@@ -22,5 +22,9 @@
 @media (max-width: 1096px) {
     .page-content {
         margin-left: 0;
+
+        &--inner {
+            padding: 24px 20px;
+        }
     }
 }

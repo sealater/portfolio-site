@@ -178,3 +178,16 @@
     }
 }
 
+@media (max-width: 684px) {
+    .sidebar {
+        &__name {
+          display: none;
+        }
+
+        &__title {
+           display: none;
+        }
+    }
+
+}
+

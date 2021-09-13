@@ -23,3 +23,11 @@
         border-radius: 0 0 16px 16px;
     }
 }
+
+@media (max-width: 1096px) {
+    .resume__page {
+        & > canvas {
+            margin-left: unset;
+        }
+    }
+}
