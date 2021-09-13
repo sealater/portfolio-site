@@ -20,7 +20,7 @@ class PortfolioTimeline extends React.Component {
                         <p className="entry__tool entry__tool--sky-blue">React.js</p>
                         <p className="entry__tool entry__tool--green">Node.js</p>
                         <p className="entry__tool entry__tool--vibrant-pink">SASS</p>
-                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/portfolio-site">View on GitHub</a>
+                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/portfolio-site" target="_blank" rel="norefferer noopener">View on GitHub</a>
                     </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="" Image="taskmanager-560-groups.png">
@@ -44,7 +44,7 @@ class PortfolioTimeline extends React.Component {
                         <p className="entry__tool entry__tool--light-orange">Razor Pages</p>
                         <p className="entry__tool entry__tool--purple">Bootstrap</p>
                         <p className="entry__tool entry__tool--sky-blue">MSSQL</p>
-                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/560-task-manager">View on GitHub</a>
+                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/560-task-manager" target="_blank" rel="norefferer noopener">View on GitHub</a>
                     </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="" Image="cowboy-cafe.png">
@@ -65,7 +65,7 @@ class PortfolioTimeline extends React.Component {
                         <p className="entry__tool entry__tool--light-orange">Razor Pages</p>
                         <p className="entry__tool entry__tool--purple">Bootstrap</p>
                         <p className="entry__tool entry__tool--sky-blue">WPF</p>
-                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/cowboy-cafe-pos">View on GitHub</a>
+                        <a className="entry__link entry__link--sky-blue" href="https://github.com/sealater/cowboy-cafe-pos" target="_blank" rel="norefferer noopener">View on GitHub</a>
                     </PortfolioTimelineEntryFooter>
                 </PortfolioTimelineEntry>
                 <PortfolioTimelineEntry DateRange="">

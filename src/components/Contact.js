@@ -6,18 +6,22 @@ import { Icons } from '../utils';
 function Contact() {
     return (
         <div className="contact">
-            <ContactButton IconName="envelope-fill"></ContactButton>
-            <ContactButton IconName="github"></ContactButton>
+            <ContactRow Label="Email" Link="mailto: private@ethandavis.me" Icon="envelope-fill.svg" Details="private@ethandavis.me" />
+            <ContactRow Label="GitHub" Link="https://github.com/sealater/" Icon="github.svg" Details="sealater" />
         </div>
     );
 }
 
-class ContactButton extends React.Component {
+class ContactRow extends React.Component {
     render() {
-        const iconStyle = { backgroundImage: "url(" + Icons[this.props.IconName + ".svg"].default + ")" };
-
         return (
-            <a className="" style={iconStyle}>{this.props.children}</a>
+            <span className="contact__row">
+                <h2 className="contact__label">{this.props.Label + ":"}</h2>
+                <a href={this.props.Link} target="_blank" rel="norefferer noopener" className="contact__info">
+                    <img src={Icons[this.props.Icon].default} className="contact__icon" />
+                    <h2 className="contact__details">{this.props.Details}</h2>
+                </a>
+            </span>
         );
     }
 }

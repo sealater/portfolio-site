@@ -289,6 +289,11 @@
         &--green:hover {
             background-color: global.$green;
         }
+
+        // Remove Outline on Focus
+        &:focus {
+            outline: 0;
+        }
     }
 
     // Timeline date indicator

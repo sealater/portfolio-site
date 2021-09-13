@@ -55,8 +55,8 @@ class SidebarContact extends React.Component {
                     Get In Touch
                 </span>
                 <ul className="sidebar__icons">
-                    <li><SidebarContactButton IconName="envelope-fill" /></li>
-                    <li><SidebarContactButton IconName="github" /></li>
+                    <li><SidebarContactButton Icon="envelope-fill.svg" Link="mailto: private@ethandavis.me" /></li>
+                    <li><SidebarContactButton Icon="github.svg" Link="https://github.com/sealater/" /></li>
                     {/*<li><SidebarContactButton IconName="telephone-fill" /></li>*/}
                 </ul>
             </div>
@@ -66,10 +66,10 @@ class SidebarContact extends React.Component {
 
 class SidebarContactButton extends React.Component {
     render() {
-        const iconStyle = { backgroundImage: "url(" + Icons[this.props.IconName + ".svg"].default + ")" };
+        const iconStyle = { backgroundImage: "url(" + Icons[this.props.Icon].default + ")" };
 
         return (
-            <a className="sidebar__button sidebar__button--contact" style={iconStyle}></a>
+            <a href={this.props.Link} target="_blank" rel="norefferer noopener" className="sidebar__button sidebar__button--contact" style={iconStyle}></a>
         );
     }
 }

@@ -1,5 +1,38 @@
 // ContactMe.scss
 
 .contact {
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 149px);
+    
+    &__row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__label {
+        flex-basis: 15%;
+    }
+
+    &__info {
+        display: flex;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__icon {
+        height: 1.2em;
+        margin-right: 16px;
+        padding-top: 0.2em;
+        align-self: center;
+    }
+
+    &__details {
+        align-self: center;
+    }
 }

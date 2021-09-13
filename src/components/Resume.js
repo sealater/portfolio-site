@@ -1,8 +1,10 @@
 // Resume.js
 import React from 'react';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import { Document, Page, pdfjs } from "react-pdf";
 import './Resume.scss'
 import PDF from '../assets/resume-revised-redacted.pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function Resume() {
     return (
