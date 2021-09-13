@@ -2,7 +2,7 @@
 
 .contact {
     min-height: calc(100vh - 149px);
-    
+
     &__row {
         display: flex;
         flex-direction: row;
@@ -34,5 +34,13 @@
 
     &__details {
         align-self: center;
+    }
+}
+
+@media (max-width: 1096px) {
+    .contact {
+        &__label {
+            flex-basis: 50%;
+        }
     }
 }
