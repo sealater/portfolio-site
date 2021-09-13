@@ -74,7 +74,7 @@
         }
 
         & > ul li::before {
-            content: "\25AA";
+            content: "\2022";
             color: global.$primary-color;
             font-weight: bold;
             display: inline-block;
@@ -191,7 +191,7 @@
         transition: all 80ms;
 
         &::after {
-            content: ' 🞂';
+            content: ' \1F782';
         }
 
         &:hover {
