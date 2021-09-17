@@ -1,5 +1,4 @@
 // App.js
-import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,7 +15,6 @@ import Resume from './components/Resume.js'
 import Contact from './components/Contact.js'
 
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-207893202-1');
 
 const history = createBrowserHistory();
 
