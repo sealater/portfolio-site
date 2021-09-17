@@ -5,7 +5,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { createBrowserHistory } from 'history';
 
 import './App.scss';
 import Sidebar from './components/Sidebar.js'
@@ -16,21 +15,18 @@ import Contact from './components/Contact.js'
 
 import ReactGA from 'react-ga';
 
-const history = createBrowserHistory();
-
-history.listen(location => {
-  ReactGA.set({ page: location.pathname });
-  ReactGA.pageview(location.pathname);
-});
+function trackPageView(event) {
+  ReactGA.pageview(window.location.pathname);
+}
 
 function App() {
   return (
-    <Router history={history}>
+    <Router>
       <div className="app">
         <Sidebar>
-          <Link to="/" className="sidebar__button">Portfolio</Link>
-          <Link to="/resume" className="sidebar__button">Resume</Link>
-          <Link to="/contactme" className="sidebar__button">Contact Me</Link>
+          <Link to="/" className="sidebar__button" onClick={trackPageView}>Portfolio</Link>
+          <Link to="/resume" className="sidebar__button" onClick={trackPageView}>Resume</Link>
+          <Link to="/contactme" className="sidebar__button" onClick={trackPageView}>Contact Me</Link>
         </Sidebar>
         <Switch>
           <Route exact path="/">
