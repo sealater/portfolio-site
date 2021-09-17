@@ -2,7 +2,7 @@
 import React from 'react';
 import { Document, Page, pdfjs } from "react-pdf";
 import './Resume.scss'
-import PDF from '../assets/resume-revised-redacted.pdf';
+import PDF from '../assets/resume-redacted.pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
