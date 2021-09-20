@@ -15,18 +15,14 @@ import Contact from './components/Contact.js'
 
 import ReactGA from 'react-ga';
 
-function trackPageView(event) {
-  ReactGA.pageview(window.location.pathname);
-}
-
 function App() {
   return (
     <Router>
       <div className="app">
         <Sidebar>
-          <Link to="/" className="sidebar__button" onClick={trackPageView}>Portfolio</Link>
-          <Link to="/resume" className="sidebar__button" onClick={trackPageView}>Resume</Link>
-          <Link to="/contactme" className="sidebar__button" onClick={trackPageView}>Contact Me</Link>
+          <Link to="/" className="sidebar__button" onClick={e => ReactGA.pageview('/')}>Portfolio</Link>
+          <Link to="/resume" className="sidebar__button" onClick={e => ReactGA.pageview('/resume')}>Resume</Link>
+          <Link to="/contactme" className="sidebar__button" onClick={e => ReactGA.pageview('/contactme')}>Contact Me</Link>
         </Sidebar>
         <Switch>
           <Route exact path="/">

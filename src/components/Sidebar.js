@@ -57,6 +57,7 @@ class SidebarContact extends React.Component {
                 <ul className="sidebar__icons">
                     <li><SidebarContactButton Icon="envelope-fill.svg" Link="mailto: private@ethandavis.me" /></li>
                     <li><SidebarContactButton Icon="github.svg" Link="https://github.com/sealater/" /></li>
+                    <li><SidebarContactButton Icon="linkedin.svg" Link="https://www.linkedin.com/in/ethan-davis-86658b221/" /></li>
                     {/*<li><SidebarContactButton IconName="telephone-fill" /></li>*/}
                 </ul>
             </div>

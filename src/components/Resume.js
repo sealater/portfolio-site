@@ -20,14 +20,14 @@ function Resume(props) {
     else if (smallDevice) {
         return (
             <Document loading="" file={PDF} className="resume__document">
-                <Page loading="" scale="1" pageNumber={1} className="resume__page" />
+                <Page loading="" scale="1" pageNumber={1} renderTextLayer={false} className="resume__page" />
             </Document>
         );
     }
 
     return (
         <Document loading="" file={PDF} className="resume__document">
-            <Page loading="" scale="1.6" pageNumber={1} className="resume__page" />
+            <Page loading="" scale="1.6" pageNumber={1} renderTextLayer={false} className="resume__page" />
         </Document>
     );
 }

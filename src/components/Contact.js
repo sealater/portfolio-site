@@ -8,6 +8,7 @@ function Contact() {
         <div className="contact">
             <ContactRow Label="Email" Link="mailto: private@ethandavis.me" Icon="envelope-fill.svg" Details="private@ethandavis.me" />
             <ContactRow Label="GitHub" Link="https://github.com/sealater/" Icon="github.svg" Details="sealater" />
+            <ContactRow Label="LinkedIn" Link="https://www.linkedin.com/in/ethan-davis-86658b221/" Icon="linkedin.svg" Details="Ethan Davis" />
         </div>
     );
 }
